@@ -1,4 +1,5 @@
-console.log('123')
+'use strict'
+
 let numberOfFilmes = +prompt('Сколько фильмов вы уже посмотрели?', '')
 
 let personalMovieDB = {
@@ -9,8 +10,19 @@ let personalMovieDB = {
     privat:false,
 };
 
-let film = prompt("Один из последних просмотренных фильмов", ''),
-    evaluation = prompt("На сколько оцените его?", '');
+for (let i=1;i<=2;i++){
+    
+    let film = prompt("Один из последних просмотренных фильмов", ''),
+        evaluation = prompt("На сколько оцените его?", '');
+    
+    if (film==null || evaluation ==null || film=="" || evaluation =="" || film.length>50){
+        console.log('error');
+        i--;
+    }
+    else{
+        personalMovieDB.movies[film]=evaluation;
+    console.log('done');
+};
+};
 
-personalMovieDB.movies[film]=evaluation;
-console.log(personalMovieDB)
+console.log(personalMovieDB);
