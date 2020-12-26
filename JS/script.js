@@ -25,4 +25,14 @@ for (let i=1;i<=2;i++){
 };
 };
 
-console.log(personalMovieDB);
+
+if (personalMovieDB.count<10){
+    console.log("просмотрено довольно мало фильмов")
+} else if(personalMovieDB.count>10 && personalMovieDB.count<30){
+    console.log("вы классический зритель")
+} else if(personalMovieDB.count>30){
+    console.log("вы киноман")
+} else {
+    console.log("произошла ошибка")
+}
+
